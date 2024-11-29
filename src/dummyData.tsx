@@ -53,7 +53,7 @@ export const Users = [
 export const Matches = [
   {
     id: 1,
-    playOfTime: new Date("2003-11-29"),
+    playOffTime: new Date("2003-11-29"),
     playNumber: 4,
     user1: {
       userId: 1,
@@ -75,7 +75,7 @@ export const Matches = [
 
   {
     id: 2,
-    playOfTime: new Date("2024-10-16"),
+    playOffTime: new Date("2024-10-16"),
     playNumber: 4,
     user1: {
       userId: 3,
@@ -97,7 +97,7 @@ export const Matches = [
 
   {
     id: 3,
-    playOfTime: new Date("2012-02-25"),
+    playOffTime: new Date("2012-02-25"),
     playNumber: 3,
     user1: {
       userId: 4,
@@ -119,7 +119,7 @@ export const Matches = [
 
   {
     id: 4,
-    playOfTime: new Date("2024-10-15"),
+    playOffTime: new Date("2024-10-15"),
     playNumber: 3,
     user1: {
       userId: 3,
@@ -140,7 +140,7 @@ export const Matches = [
   },
   {
     id: 4,
-    playOfTime: new Date("2024-10-15"),
+    playOffTime: new Date("2024-10-15"),
     playNumber: 3,
     user1: {
       userId: 3,
@@ -161,7 +161,7 @@ export const Matches = [
   },
   {
     id: 4,
-    playOfTime: new Date("2024-10-15"),
+    playOffTime: new Date("2024-10-15"),
     playNumber: 3,
     user1: {
       userId: 3,
@@ -182,7 +182,7 @@ export const Matches = [
   },
   {
     id: 4,
-    playOfTime: new Date("2024-10-15"),
+    playOffTime: new Date("2024-10-15"),
     playNumber: 3,
     user1: {
       userId: 3,
@@ -203,7 +203,7 @@ export const Matches = [
   },
   {
     id: 4,
-    playOfTime: new Date("2024-10-15"),
+    playOffTime: new Date("2024-10-15"),
     playNumber: 3,
     user1: {
       userId: 3,

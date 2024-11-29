@@ -7,7 +7,7 @@ import dayjs from "dayjs";
 type MatchProps = {
   match: {
     _id: string;
-    playOfTime: string;
+    playOffTime: string;
     playNumber: number;
     user1: {
       userId: string;
@@ -29,6 +29,8 @@ type MatchProps = {
 };
 
 const Match = ({ match }: MatchProps) => {
+  console.log("Raw playOffTime:", match.playOffTime);
+  console.log("Is valid date:", dayjs(match.playOffTime).isValid());
   const { csrfToken } = useAuth();
 
   // ユーザー情報を取得する非同期関数を定義
@@ -87,7 +89,7 @@ const Match = ({ match }: MatchProps) => {
     >
       <div>
         <div className="text-2xl p-1">
-          <div>{dayjs(match.playOfTime).format("YYYY/MM/DD")}</div>
+          <div>{dayjs(match.playOffTime).format("YYYY/MM/DD")}</div>
         </div>
         <div className="flex items-center justify-center">
           <hr className="w-11/12" />
