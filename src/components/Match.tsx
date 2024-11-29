@@ -7,7 +7,7 @@ import dayjs from "dayjs";
 type MatchProps = {
   match: {
     _id: string;
-    playOfTime: string;
+    playOffTime: string;
     playNumber: number;
     user1: {
       userId: string;
@@ -87,7 +87,7 @@ const Match = ({ match }: MatchProps) => {
     >
       <div>
         <div className="text-2xl p-1">
-          <div>{dayjs(match.playOfTime).format("YYYY/MM/DD")}</div>
+          <div>{dayjs(match.playOffTime).format("YYYY/MM/DD")}</div>
         </div>
         <div className="flex items-center justify-center">
           <hr className="w-11/12" />

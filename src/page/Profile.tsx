@@ -7,7 +7,7 @@ import Match from "../components/Match";
 
 type MatchData = {
   _id: string; // MongoDBのObjectIdは文字列として扱います
-  playOfTime: string; // ISOフォーマットの文字列で日時が渡される
+  playOffTime: string; // ISOフォーマットの文字列で日時が渡される
   playNumber: number;
   user1: {
     userId: string;
@@ -49,8 +49,8 @@ function Profile() {
 
         // 全試合を新しい順でソート
         const sortedAllMatches = [...allMatches].sort((a, b) => {
-          const dateA = new Date(a.playOfTime);
-          const dateB = new Date(b.playOfTime);
+          const dateA = new Date(a.playOffTime);
+          const dateB = new Date(b.playOffTime);
           return dateB.getTime() - dateA.getTime(); // 新しい順にソート
         });
 
