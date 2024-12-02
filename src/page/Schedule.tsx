@@ -64,7 +64,7 @@ const Schedule = () => {
     };
 
     fetchMatches();
-  }, [csrfToken]);
+  }, []);
 
   if (loading) {
     return (

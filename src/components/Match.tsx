@@ -77,7 +77,7 @@ const Match = ({ match }: MatchProps) => {
     };
 
     fetchAllUsersData();
-  }, [csrfToken, match]);
+  }, [match]);
 
   // 全てのリクエストを実行し、ユーザー情報を取得する
 
