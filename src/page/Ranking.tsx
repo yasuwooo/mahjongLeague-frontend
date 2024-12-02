@@ -40,7 +40,7 @@ const Ranking: React.FC = () => {
     };
 
     fetchRankingData();
-  }, [csrfToken]);
+  }, []);
 
   return (
     <div>

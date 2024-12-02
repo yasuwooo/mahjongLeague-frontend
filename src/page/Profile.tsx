@@ -63,7 +63,7 @@ function Profile() {
     };
 
     fetchMatches();
-  }, [csrfToken]);
+  }, []);
 
   if (loading) {
     return (
