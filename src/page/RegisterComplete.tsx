@@ -5,7 +5,6 @@ import { useAuth } from "../context/AuthProvider";
 
 const RegisterComplete = () => {
   const { csrfToken } = useAuth();
-  const [verificationMessage, setVerificationMessage] = useState(""); // サーバーからのメッセージを格納する状態
   const { token } = useParams();
 
   // コンポーネントがマウントされたときにのみアカウントの確認を行う
@@ -22,20 +21,22 @@ const RegisterComplete = () => {
             },
           }
         );
-        setVerificationMessage(response.data); // サーバーからのメッセージを保存
-      } catch (error) {
-        setVerificationMessage("トークンの確認に失敗しました。");
-        console.error("トークンの確認に失敗しました:", error);
+        alert(response.data);
+        window.location.href = "/auth/login";
+      } catch (error: unknown) {
+        if (axios.isAxiosError(error)) {
+          if (error.response) {
+            alert(error.response.data);
+          }
+        } else {
+          alert("サーバーに接続できませんでした。もう一度お試しください。");
+        }
       }
     };
     verifyAccount();
-  }, [token]); // トークンが変わったときに再実行
+  }, []); // トークンが変わったときに再実行
 
-  return (
-    <div className="flex text-2xl items-center justify-center">
-      {verificationMessage}
-    </div>
-  ); // メッセージを表示
+  return <div className="flex text-2xl items-center justify-center"></div>; // メッセージを表示
 };
 
 export default RegisterComplete;
