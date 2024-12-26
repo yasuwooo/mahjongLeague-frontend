@@ -86,7 +86,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     };
 
     checkAuthStatus();
-  }, []);
+  }, [csrfToken]);
 
   // ユーザープロフィールの取得用のuseEffect
   useEffect(() => {
@@ -115,7 +115,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     if (isLoggedIn) {
       fetchUserProfile(); // isLoggedInがtrueのときのみ実行
     }
-  }, [isLoggedIn]);
+  }, [csrfToken, isLoggedIn]);
 
   return (
     <AuthContext.Provider

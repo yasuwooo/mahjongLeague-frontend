@@ -34,7 +34,7 @@ const RegisterComplete = () => {
       }
     };
     verifyAccount();
-  }, []); // トークンが変わったときに再実行
+  }, [csrfToken]); // トークンが変わったときに再実行
 
   return <div className="flex text-2xl items-center justify-center"></div>; // メッセージを表示
 };
